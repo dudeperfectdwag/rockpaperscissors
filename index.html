@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RPSLS • Ultimate Trash Talk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div class="header">
+      <button class="info-btn" id="info-toggle">?</button>
+      <h1>🪨📄✂️🦎🖖</h1>
+      <div class="subtitle">Rock Paper Scissors Lizard Spock 🔥</div>
+    </div>
+
+    <div class="score-container">
+      <div class="score-box player">
+        <div class="score-label">YOU</div>
+        <div class="score-value" id="player-score">0</div>
+      </div>
+      
+      <div class="vs">VS</div>
+      
+      <div class="score-box computer">
+        <div class="score-label">COMPUTER</div>
+        <div class="score-value" id="computer-score">0</div>
+      </div>
+    </div>
+
+    <div class="result-message" id="result">Choose your weapon...</div>
+
+    <div class="choices" id="choices">
+      <button class="choice" data-choice="rock">
+        <span class="emoji">🪨</span>
+        <span class="label">Rock</span>
+      </button>
+      
+      <button class="choice" data-choice="paper">
+        <span class="emoji">📄</span>
+        <span class="label">Paper</span>
+      </button>
+      
+      <button class="choice" data-choice="scissors">
+        <span class="emoji">✂️</span>
+        <span class="label">Scissors</span>
+      </button>
+      
+      <button class="choice" data-choice="lizard">
+        <span class="emoji">🦎</span>
+        <span class="label">Lizard</span>
+      </button>
+      
+      <button class="choice" data-choice="spock">
+        <span class="emoji">🖖</span>
+        <span class="label">Spock</span>
+      </button>
+    </div>
+
+    <button class="reset-btn" id="reset">Reset Game</button>
+  </div>
+
+  <!-- How to Play Modal -->
+  <div class="modal" id="info-modal">
+    <div class="modal-content">
+      <h2>How to Play RPSLS</h2>
+      <div class="rules">
+        <p><strong>Classic Rules:</strong></p>
+        <ul>
+          <li>✂️ Scissors <strong>cuts</strong> 📄 Paper</li>
+          <li>📄 Paper <strong>covers</strong> 🪨 Rock</li>
+          <li>🪨 Rock <strong>crushes</strong> ✂️ Scissors</li>
+        </ul>
+        <p><strong>Lizard & Spock:</strong></p>
+        <ul>
+          <li>🪨 Rock <strong>crushes</strong> 🦎 Lizard</li>
+          <li>🦎 Lizard <strong>poisons</strong> 🖖 Spock</li>
+          <li>🖖 Spock <strong>smashes</strong> ✂️ Scissors</li>
+          <li>🖖 Spock <strong>vaporizes</strong> 🪨 Rock</li>
+          <li>🦎 Lizard <strong>eats</strong> 📄 Paper</li>
+          <li>📄 Paper <strong>disproves</strong> 🖖 Spock</li>
+          <li>✂️ Scissors <strong>decapitates</strong> 🦎 Lizard</li>
+        </ul>
+        <p><em>Each beats 2, loses to 2. No spam — 3s cooldown per round!</em></p>
+      </div>
+      <button class="close-modal" id="close-info">Got it!</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
